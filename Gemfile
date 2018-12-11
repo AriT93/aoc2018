@@ -1,4 +1,10 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'seeing_is_believing'
-gem 'solargraph'
+group :development do
+  gem 'awesome_print'
+  gem 'seeing_is_believing'
+  gem 'solargraph'
+  gem 'solargraph-rails'
+end
