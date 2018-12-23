@@ -1,0 +1,8 @@
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/NumericLiterals:
+  Enabled: false

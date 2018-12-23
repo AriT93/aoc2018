@@ -8,4 +8,5 @@ group :development do
   gem 'seeing_is_believing'
   gem 'solargraph'
   gem 'solargraph-rails'
+  gem 'rspec'
 end
