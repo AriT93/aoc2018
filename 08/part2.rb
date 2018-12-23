@@ -21,11 +21,11 @@ File.open('input.txt', 'r').each_line do |line|
 end
 
 def build_tree(numbers, nodes)
-  node = Node.new(nodes.shift, Array.new(numbers.shift), Array.new(numbers.shift))
-  node.children.size.times do |c|
-    node.children[c] = build_tree(numbers, nodes)
-  end
-  node.metadata.size.times { |m| node.metadata[m] = numbers.shift }
+  node = Node.new(nodes.shift, [], [])
+  children = numbers.shift
+  metadata = numbers.shift
+  children.times { node.children << build_tree(numbers, nodes) }
+  metadata.times { node.metadata << numbers.shift }
   node
 end
 
