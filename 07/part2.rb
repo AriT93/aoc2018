@@ -28,7 +28,6 @@ while todo.any? || workers.any?
   todo.each do |step|
     next if h[step].any?
 
-    'a'.tr('a', 'b')
     todo.delete(step)
     job_length = step.ord - 'A'.ord + 1 + 60
     workers[step] = job_length
